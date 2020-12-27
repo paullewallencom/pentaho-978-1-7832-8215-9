@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <title>START Animation</title>
+  <script>  
+    var currentDegree = 0;
+    var delta = 1;
+    var delay = 10; 
+    
+    var objStar; 
+    var timer; 
+    
+    function animate()
+    {
+	  if(objStar == undefined)
+	  {
+		  objStar = document.getElementById("objStar");
+		  currentDegree = 0; 
+		  timer = setInterval(animate, delay);
+	  }
+	  else
+	  {		  
+		  objStar.setAttribute("transform", "rotate(" + currentDegree + ")"); 
+		  currentDegree += delta;
+		  if(currentDegree >= 360) currentDegree = 0;
+	  }
+    }
+    
+  </script>  
+</head>
+
+<body>
+  <svg width="400px" height="400px" viewBox="0 0 600 600">
+    <g transform="translate(200, 200)"> 
+	
+  <polygon id="objStar"
+	points="0,-144 48,-49 150,-34 72,38 90,144 0,93 -95,144 -75,38 -150,-34 -48,-49" 
+	style="fill:yellow;stroke:red;stroke-width:5;fill-rule:nonzero; stroke-dasharray: 10, 5;">
+            
+    </g>
+  </svg>
+  <script>
+   animate();
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+#Header div {
+    background: url('background-header.png') repeat-x !important;
+}
+
+#Header div h2 {
+    color: white  !important;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#Body div:nth-child(2)
+{
+    background: white !important;
+}

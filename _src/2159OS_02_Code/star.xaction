@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<action-sequence> 
+  <title>Animated Star</title>
+  <version>1</version>
+  <logging-level>ERROR</logging-level>
+  <documentation> 
+    <author>Feris</author>  
+    <description>This is a chapter 2 demo to show how to use message template component to render Animated Star using Javascript + SVG.</description>  
+    <help/>  
+    <result-type/>  
+    <icon/> 
+  </documentation>
+
+  <inputs/>
+
+  <outputs>
+    <output type="string">
+      <destinations>
+        <response>content</response>
+      </destinations>
+    </output>
+  </outputs>
+
+  <resources>
+    <template>
+      <solution-file>
+        <location>star.html</location>
+        <mime-type>text/plain</mime-type>
+      </solution-file>
+    </template>
+  </resources>
+  
+  <actions> 
+    <action-definition>
+      <component-name>TemplateComponent</component-name>
+      <action-type>Message Template</action-type>
+      <action-resources>
+        <template type="resource"/>
+      </action-resources>
+      <action-outputs>
+        <output-message type="string" mapping="output"/>
+      </action-outputs>
+      <component-definition/>
+    </action-definition>
+
+  </actions> 
+</action-sequence>
